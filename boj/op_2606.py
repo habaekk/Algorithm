@@ -23,3 +23,8 @@ while len(nlst) != len(olst) :
                     mlst.add(lst[i][0])
     nlst.update(mlst)
 print(len(nlst)-1)
+
+# 탐색
+# list pop(0) 은 비효율적
+# collection deque 쓰기
+# list += iterable object 가능

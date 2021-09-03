@@ -6,7 +6,7 @@ for _ in range(T):
     ans = 1
     for i in range(n):
         name, part = input().split()
-        if lst.__contains__(part):
+        if part in lst:
             lst[part] += 1
         else:
             lst[part] = 1

@@ -50,4 +50,5 @@ for i in range(len(result_BFS)):
 print()
 
 
-# print(type(list(set(1)))) 다 같이 쓰면 왜 오류나냐??
+# print(type(list(set(1)))) 다 같이 쓰면 왜 오류나냐?? list or set 함수에 대해 더 찾아봐야...
+# 엄... 다른 사람 다 나랑 다르게 풀었네...

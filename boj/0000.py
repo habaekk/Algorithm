@@ -1,1 +1,5 @@
-print(type(list(set(1))))
+import heapq
+
+heap = []
+heapq.heapify(heap)
+print(type(heap))

@@ -77,4 +77,38 @@ def mergeSort(x):
 
 
 ##### Quick Sort #####
+def quick_sort(array, start, end):
+    if start >= end:
+        return
+    pivot = start
+    left = start + 1
+    right = end
+    while(left <= right):
+        while(left <= end and array[left] <= array[pivot]):
+            left += 1
+        while(right > start and array[right] >= array[pivot]):
+            right -= 1
+        if(left > right):
+            array[right], array[pivot] = array[pivot], array[right]
+        else:
+            array[left], array[right] = array[right], array[left]
 
+    quick_sort(array, start, right - 1)
+    quick_sort(array, right + 1, end)
+
+
+def quick_sorted(arr):
+    if len(arr) > 1:
+        pivot = arr[len(arr)-1]
+        left, mid, right = [], [], []
+        for i in range(len(arr)-1):
+            if arr[i] < pivot:
+                left.append(arr[i])
+            elif arr[i] > pivot:
+                right.append(arr[i])
+            else:
+                mid.append(arr[i])
+        mid.append(pivot)
+        return quick_sorted(left) + mid + quick_sorted(right)
+    else:
+        return arr

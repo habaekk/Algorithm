@@ -1,3 +1,2 @@
-lst = [(1, 2)]
-if (1, 2) in lst:
-    print(":")
+lst = [1] * 3
+print(lst)
